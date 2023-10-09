@@ -1,0 +1,27 @@
+guide: https://platform.openai.com/docs/guides/gpt
+token counter: https://platform.openai.com/tokenizer
+pricing: https://openai.com/pricing
+cookbook: https://cookbook.openai.com/examples/how_to_stream_completions
+sdks: https://github.com/betalgo/openai/blob/master/OpenAI.SDK/EndpointProviders/AzureOpenAiEndpointProvider.cs
+
+system roles:
+1. You are a football expert/professional recruitter/helpfull assistant
+2. break this down
+
+prompting with 6 components (all not needed):
+1. persona:		info about the person making the request
+2. context:		description of the task
+3. task:		action to perform. i.e. write
+4. format:		email, bullet points, code blocks, paragraphs, markdown
+5. tones:		casual, formal, witty, pesimistic.
+6. exemplar:	example of what the output should contain.
+
+example:
+im a product manager at apple (persona) and we did a collab with telsa
+and received additional 1200 orders (context). Write (task) an email (format)
+to your boss sharing the positive news. The email should include tldr, section,
+project background, metrics, and end with a thank you to the enginerring teams (exemplar).
+Use clear and concise language and write in a confident but friendly tone (tone)
+
+other examplar examples: 
+the email should follow the exact format as below: ***example here***
