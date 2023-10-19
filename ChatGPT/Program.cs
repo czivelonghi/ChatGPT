@@ -1,5 +1,4 @@
-﻿using ChatGPT.Interfaces;
-using ChatGPT.Models;
+﻿using ChatGPT.Models;
 using ChatGPT.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -29,7 +28,9 @@ IHost host = Host.CreateDefaultBuilder(args)
     })
     .Build();
 
-host
+ChatService? service = host
     .Services
-    .GetService<ChatService>()
-    ?.StartAsync();
+    .GetService<ChatService>();
+
+if (service != null)
+    await service.StartAsync();
